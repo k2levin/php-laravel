@@ -1,0 +1,13 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker build -t php-laravel .
+  - docker run -d php-laravel
+  - docker ps -a
+
+script:
+  - composer --version
+  - phpunit --version
