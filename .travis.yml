@@ -10,4 +10,9 @@ before_install:
 
 script:
   - docker run -it --rm image composer --version
+  - docker run -it --rm image nano --version
+  - docker run -it --rm image php --version
+  - docker run -it --rm image php -m
   - docker run -it --rm image phpunit --version
+  - docker run -it --rm image vim --version
+  - docker run -it --rm image ll
