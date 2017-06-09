@@ -1,4 +1,4 @@
-Docker image for PHP (Laravel Framework)
+Docker image with PHP (Laravel Framework)
 ========================================
 
 [![Build Status](https://travis-ci.org/k2levin/php-laravel.svg?branch=master)](https://travis-ci.org/k2levin/php-laravel)
@@ -15,9 +15,15 @@ Docker image for PHP (Laravel Framework)
 
 Base image from [php:7.1-fpm-alpine](https://hub.docker.com/_/php/)
 
-Additional php extension list:
+Additional PHP extension list:
 * pdo_mysql
 
-Additional executable file list:
+Additional tool list:
+* bash
 * composer
+* nano
 * phpunit
+* vim
+
+Additional startup bash script list:
+* ```alias ll='ls -la'```
