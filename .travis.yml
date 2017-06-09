@@ -15,4 +15,3 @@ script:
   - docker run -it --rm image php -m
   - docker run -it --rm image phpunit --version
   - docker run -it --rm image vim --version
-  - docker run -it --rm image ll
