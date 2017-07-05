@@ -16,13 +16,13 @@ Docker image with PHP (Laravel Framework)
 Base image from [php:7.1-fpm-alpine](https://hub.docker.com/_/php/)
 
 Additional PHP extension list:
+* gd
 * pdo_mysql
 
 Additional tool list:
 * bash
 * composer
 * nano
-* phpunit
 * vim
 
 Additional startup bash script list:
