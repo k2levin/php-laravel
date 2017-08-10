@@ -4,7 +4,7 @@ LABEL MAINTAINER "k2leving@gmail.com"
 
 COPY ./files/.bashrc /root/
 
-RUN apk add --no-cache --update alpine-sdk bash git libpng-dev mysql-client nano nginx openrc openssh openssl php7 php7-ctype php7-dom php7-fileinfo php7-fpm php7-gd php7-json php7-mbstring php7-pdo php7-pdo_mysql php7-phar php7-session php7-tokenizer php7-xml php7-xmlwriter python vim yarn && \
+RUN apk add --no-cache --update alpine-sdk bash git libpng-dev mysql-client nano nginx openrc openssh openssl php7 php7-ctype php7-curl php7-dom php7-fileinfo php7-fpm php7-gd php7-json php7-mbstring php7-pdo php7-pdo_mysql php7-phar php7-session php7-tokenizer php7-xml php7-xmlwriter python tzdata vim yarn && \
 # composer installation
   curl -O https://getcomposer.org/composer.phar && \
   mv composer.phar /usr/local/bin/composer && \
