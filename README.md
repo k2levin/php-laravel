@@ -13,17 +13,41 @@ Docker image with PHP (Laravel Framework)
 [![Docker Stars](https://img.shields.io/docker/stars/k2levin/php-laravel.svg)](https://hub.docker.com/r/k2levin/php-laravel/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/k2levin/php-laravel.svg)](https://hub.docker.com/r/k2levin/php-laravel/)
 
-Base image from [php:7.1-fpm-alpine](https://hub.docker.com/_/php/)
+Base image from [alpine:latest](https://hub.docker.com/_/alpine/)
 
 Additional PHP extension list:
+* ctype
+* curl
+* dom
+* fileinfo
+* fpm
 * gd
+* json
+* mbstring
+* pdo
 * pdo_mysql
+* phar
+* session
+* tokenizer
+* xml
+* xmlwriter
 
 Additional tool list:
+* apidoc
 * bash
+* bower
 * composer
+* git
+* grunt-cli
+* gulp-cli
+* mysql-client
 * nano
+* nginx
+* node
+* npm
+* python
 * vim
 
 Additional startup bash script list:
-* ```alias ll='ls -la'```
+* ```alias ll='ls -la';```
+* ```alias phpunittest='vendor/bin/phpunit --color=always';```
