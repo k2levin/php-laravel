@@ -14,8 +14,9 @@ RUN apk add --no-cache --update alpine-sdk bash git libpng-dev mysql-client nano
 # openrc installation
   mkdir /run/mysqld mkdir /run/openrc && mkdir /run/nginx && touch /run/openrc/softlevel && echo 'rc_provide="net"' >> /etc/rc.conf && sed -i 's/cgroup_add_service /# cgroup_add_service /g' /lib/rc/sh/openrc-run.sh && \
   sed -i '/tty/d' /etc/inittab && sed -i 's/mount -t tmpfs/# mount -t tmpfs/g' /lib/rc/sh/init.sh && sed -i 's/#rc_sys=""/rc_sys="lxc"/g' /etc/rc.conf && \
-  rc-update add nginx default && rc-update add php-fpm7 default
-
+  rc-update add nginx default && rc-update add php-fpm7 default && \
+# change timezone to UTC+08:00
+  cp /usr/share/zoneinfo/Asia/Singapore /etc/localtime && echo 'Asia/Singapore' > /etc/timezone && apk del tzdata
 EXPOSE 80
 
 CMD ["/sbin/init"]
