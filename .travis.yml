@@ -10,7 +10,14 @@ before_install:
 
 script:
   - docker run -it --rm image composer --version
+  - docker run -it --rm image bower --version
+  - docker run -it --rm image grunt --version
+  - docker run -it --rm image gulp --version
+  - docker run -it --rm image mysql --version
+  - docker run -it --rm image node --version
+  - docker run -it --rm image npm --version
   - docker run -it --rm image nano --version
   - docker run -it --rm image php --version
   - docker run -it --rm image php -m
+  - docker run -it --rm image python --version
   - docker run -it --rm image vim --version
