@@ -17,6 +17,6 @@ RUN apk add --no-cache --update alpine-sdk bash git libpng-dev mysql-client nano
   rc-update add nginx default && rc-update add php-fpm7 default && \
 # change timezone to UTC+08:00
   cp /usr/share/zoneinfo/Asia/Singapore /etc/localtime && echo 'Asia/Singapore' > /etc/timezone && apk del tzdata
-EXPOSE 80
+EXPOSE 80 443
 
 CMD ["/sbin/init"]
