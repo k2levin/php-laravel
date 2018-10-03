@@ -15,6 +15,8 @@ RUN apk add --no-cache --update alpine-sdk bash git libpng-dev mysql-client nano
   sed -i 's/cgroup_add_service()/cgroup_add_service() { return 0 ; }\ncgroup_add_service_old()/g' /lib/rc/sh/rc-cgroup.sh && \
   chmod 755 /etc/init.d/crond && \
   rc-update add crond default && rc-update add nginx default && rc-update add php-fpm7 default && \
+# increase nginx request header size
+  sed -i 's/http {/http {\n        # The size of request header (default 8k)\n        large_client_header_buffers 4 64k;\n/g' /etc/nginx/nginx.conf && \
 # change timezone to UTC+08:00
   cp /usr/share/zoneinfo/Asia/Singapore /etc/localtime && echo 'Asia/Singapore' > /etc/timezone && apk del tzdata
 
