@@ -16,10 +16,10 @@ RUN apk add --no-cache --update alpine-sdk bash git libpng-dev mysql-client nano
   chmod 755 /etc/init.d/crond && \
   rc-update add crond default && rc-update add nginx default && rc-update add php-fpm7 default && \
 # nginx configuration
-  sed -i 's/worker_connections 1024;/worker_connections 32768;/g' /etc/nginx/nginx.conf && \
+  sed -i 's/worker_connections 1024;/worker_connections 32768;/g' /etc/nginx/nginx.conf && sed -i 's/http {/http {\n        # The size of request header (default 8k)\n        large_client_header_buffers 4 64k;\n/g' /etc/nginx/nginx.conf && \
 # timezone to UTC+08:00
   cp /usr/share/zoneinfo/Asia/Singapore /etc/localtime && echo 'Asia/Singapore' > /etc/timezone && apk del tzdata
 
-EXPOSE 80 443
+EXPOSE 80
 
 CMD ["/sbin/init"]
