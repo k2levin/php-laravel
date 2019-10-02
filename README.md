@@ -13,7 +13,7 @@ Docker image with PHP (Laravel Framework)
 [![Docker Stars](https://img.shields.io/docker/stars/k2levin/php-laravel.svg)](https://hub.docker.com/r/k2levin/php-laravel/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/k2levin/php-laravel.svg)](https://hub.docker.com/r/k2levin/php-laravel/)
 
-Base image from [alpine:latest](https://hub.docker.com/_/alpine/)
+Base image from [alpine](https://hub.docker.com/_/alpine/)
 
 Additional PHP extension list:
 * ctype
