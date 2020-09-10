@@ -19,5 +19,5 @@ script:
   - docker run -it --rm image nano --version
   - docker run -it --rm image php --version
   - docker run -it --rm image php -m
-  - docker run -it --rm image python --version
+  - docker run -it --rm image python3 --version
   - docker run -it --rm image vim --version
