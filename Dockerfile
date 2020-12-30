@@ -11,7 +11,7 @@ RUN apk add --no-cache --update alpine-sdk bash git libpng-dev mysql-client nano
 # php-fpm setup
   sed -i 's/user = nobody/user = 1000/1' /etc/php7/php-fpm.d/www.conf && \
 # node setup
-  npm install -g apidoc bower grunt-cli gulp-cli && \
+  npm install -g bower grunt-cli gulp-cli && \
 # openrc setup
   sed -i 's/#rc_provide="!net"/rc_provide="net"/g' /etc/rc.conf && sed -i 's/#rc_sys=""/rc_sys="lxc"/g' /etc/rc.conf && \
   sed -i 's/cgroup_add_service()/cgroup_add_service() { return 0 ; }\ncgroup_add_service_old()/g' /lib/rc/sh/rc-cgroup.sh && \
