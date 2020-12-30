@@ -16,6 +16,7 @@ Docker image with PHP Edge (Laravel Framework)
 Base image from [alpine](https://hub.docker.com/_/alpine/)
 
 Additional PHP extension list:
+* bcmath
 * ctype
 * curl
 * dom
@@ -26,8 +27,10 @@ Additional PHP extension list:
 * mbstring
 * pdo
 * pdo_mysql
+* pecl-redis
 * phar
 * session
+* simplexml
 * tokenizer
 * xml
 * xmlwriter
@@ -43,10 +46,11 @@ Additional tool list:
 * mysql-client
 * nano
 * nginx
-* node
+* nodejs
 * npm
-* python
+* python3
 * vim
+* yarn
 
 Additional startup bash script list:
 * ```alias ll='ls -la';```

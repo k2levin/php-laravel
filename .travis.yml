@@ -21,3 +21,4 @@ script:
   - docker run -it --rm image php -m
   - docker run -it --rm image python3 --version
   - docker run -it --rm image vim --version
+  - docker run -it --rm image yarn --version
