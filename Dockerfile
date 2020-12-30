@@ -1,4 +1,4 @@
-FROM alpine:edge
+FROM alpine:3.12
 
 LABEL MAINTAINER "k2leving@gmail.com"
 
