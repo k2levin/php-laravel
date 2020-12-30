@@ -1,4 +1,4 @@
-Docker image with PHP 7.3 (Laravel Framework)
+Docker image with PHP Edge (Laravel Framework)
 ===
 
 [![Build Status](https://travis-ci.org/k2levin/php-laravel.svg?branch=master)](https://travis-ci.org/k2levin/php-laravel)
