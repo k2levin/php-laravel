@@ -23,6 +23,7 @@ Additional PHP extension list:
 * fileinfo
 * fpm
 * gd
+* iconv
 * json
 * mbstring
 * pdo
@@ -33,7 +34,9 @@ Additional PHP extension list:
 * simplexml
 * tokenizer
 * xml
+* xmlreader
 * xmlwriter
+* zip
 
 Additional tool list:
 * apidoc
