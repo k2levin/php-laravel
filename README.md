@@ -36,7 +36,6 @@ Additional PHP extension list:
 * xmlwriter
 
 Additional tool list:
-* apidoc
 * bash
 * bower
 * composer
