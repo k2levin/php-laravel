@@ -13,9 +13,7 @@ RUN apk add --no-cache --update alpine-sdk bash git libpng-dev mysql-client nano
 # node setup
   npm install -g apidoc bower grunt-cli gulp-cli && \
 # openrc setup
-  sed -i 's/#rc_provide="!net"/rc_provide="net"/g' /etc/rc.conf && sed -i 's/#rc_sys=""/rc_sys="lxc"/g' /etc/rc.conf && \
-  sed -i 's/cgroup_add_service()/cgroup_add_service() { return 0 ; }\ncgroup_add_service_old()/g' /lib/rc/sh/rc-cgroup.sh && \
-  chmod 755 /etc/init.d/crond && \
+  sed -i 's/cgroup_add_service()/cgroup_add_service() { return 0; }\ncgroup_add_service_old()/g' /lib/rc/sh/rc-cgroup.sh && \
   rc-update add crond default && rc-update add nginx default && rc-update add php-fpm7 default && \
 # timezone to UTC+08
   cp /usr/share/zoneinfo/Asia/Singapore /etc/localtime && echo 'Asia/Singapore' > /etc/timezone && apk del tzdata
