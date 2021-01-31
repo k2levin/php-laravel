@@ -7,7 +7,7 @@ COPY ./files/crond /etc/init.d/
 
 RUN apk add --no-cache --update alpine-sdk bash git libpng-dev mysql-client nano nginx nodejs nodejs-npm openrc openssh openssl php7 php7-ctype php7-curl php7-dom php7-fileinfo php7-fpm php7-gd php7-json php7-mbstring php7-pdo php7-pdo_mysql php7-phar php7-session php7-simplexml php7-tokenizer php7-xml php7-xmlwriter php7-zip python tzdata vim && \
 # composer setup
-  curl -O https://getcomposer.org/composer.phar && mv composer.phar /usr/local/bin/composer && chmod 755 /usr/local/bin/composer && \
+  curl -O https://getcomposer.org/composer-1.phar && mv composer-1.phar /usr/local/bin/composer && chmod 755 /usr/local/bin/composer && \
 # php-fpm setup
   sed -i 's/user = nobody/user = 1000/1' /etc/php7/php-fpm.d/www.conf && \
 # node setup
